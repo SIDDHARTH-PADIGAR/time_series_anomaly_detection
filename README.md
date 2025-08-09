@@ -94,7 +94,3 @@ graph TD
 Through this project, I have demonstrated a thorough understanding of both foundational statistical approaches and advanced machine learning techniques for anomaly detection. The implemented methods cover a spectrum of scenarios including distribution assumptions, model-free detection, and local neighborhood analysis. This breadth reflects capability with core concepts and practical mastery valuable for real-world data science challenges involving time series analysis.
 
 The explanations and implementations emphasize robustness to data noise, interpretability through visualization, and quantitative evaluation against labeled benchmarks, highlighting an ability to deliver reliable, production-ready insights.
-
-***
-
-If you want, I can also help add sections on results visualization, evaluation metrics, or extend to pattern-wise anomaly detection methods in the future. Let me know.
