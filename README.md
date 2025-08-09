@@ -74,10 +74,10 @@ graph TD
     B --> E[Ensemble Learning]
     B --> F[Density-based Methods]
 
-    D --> D1[MAD, Z-Score, Robust Z-Score]
-    E --> E1[Isolation Forest]
-    F --> F1[Local Outlier Factor (LOF)]
-    F1 --> F2[Reachability Distance]
+    D --> D1["MAD, Z-Score, Robust Z-Score"]
+    E --> E1["Isolation Forest"]
+    F --> F1["Local Outlier Factor LOF"]
+    F1 --> F2["Reachability Distance"]
 
     subgraph Explanation
     D1["Captures individual point deviations via statistics"]
