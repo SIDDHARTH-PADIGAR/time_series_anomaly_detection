@@ -25,7 +25,7 @@ $$
 \text{Robust Z-Score} = \frac{x_i - \text{median}(X)}{\text{MAD}(X)}
 $$
 
-where $$ \text{MAD}(X) = \text{median}(|X_i - \text{median}(X)|) $$.
+
 
 Robust Z-Score is especially suited for anomaly detection in noisy or non-Gaussian time series, as it more accurately captures typical behavior without distortion by outliers or heavy tails.
 
