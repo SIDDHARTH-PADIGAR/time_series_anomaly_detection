@@ -7,6 +7,9 @@ This repository contains my implementation and experiments with various techniqu
 Anomaly detection in time series broadly falls into two categories: **point-wise** and **pattern-wise** detection.
 
 - **Point-wise anomaly detection** identifies individual time points that deviate significantly from typical behavior. This approach is useful for detecting spikes, drops, or isolated outliers occurring at specific time instances.
+
+<img width="889" height="590" alt="point-wise" src="https://github.com/user-attachments/assets/d1c0f84c-6d9b-45fc-9d23-6277e3e5165c" />
+
 - **Pattern-wise anomaly detection** focuses on identifying anomalous subsequences or segments within the time series that exhibit unusual patterns compared to normal segments. This is important for detecting complex anomalies such as recurring abnormal cycles or changes in temporal trends.
 
 This repository emphasizes **point-wise anomaly detection** methods but the foundations can extend to pattern-wise approaches with additional modeling and segmentation.
@@ -21,13 +24,16 @@ Classical statistical methods provide foundational approaches to point-wise anom
 - **Z-Score** expresses how many standard deviations a data point is from the mean. It assumes data is normally distributed and is sensitive to outliers because mean and standard deviation are influenced by extreme values.
 - **Robust Z-Score** replaces the mean with the median and the standard deviation with the Median Absolute Deviation, making it resistant to skewed data and extreme outliers. It is computed as:
 
+<img width="889" height="590" alt="MAD" src="https://github.com/user-attachments/assets/6c0fcd3b-7f7f-4e6d-a3bb-1682f7f402ae" />
+
 $$
 \text{Robust Z-Score} = \frac{x_i - \text{median}(X)}{\text{MAD}(X)}
 $$
 
-
-
 Robust Z-Score is especially suited for anomaly detection in noisy or non-Gaussian time series, as it more accurately captures typical behavior without distortion by outliers or heavy tails.
+
+**MAD Evaluation:**
+<img width="704" height="590" alt="MAD_eval" src="https://github.com/user-attachments/assets/25f9d677-0dfd-4e7f-b35e-345e8bd0a33d" />
 
 ### Isolation Forest
 
@@ -38,6 +44,10 @@ Isolation Forest is an unsupervised ensemble learning method tailored for anomal
 - Isolation Forest assigns an anomaly score based on the average path length required to isolate a point; shorter paths indicate higher likelihood of anomaly.
 
 This approach works well for high-dimensional or complex datasets without assuming any data distribution, providing a scalable and effective anomaly detection method.
+
+**IsolationForest Evaluation:**
+<img width="695" height="590" alt="IsolationForest_Evaluation" src="https://github.com/user-attachments/assets/6c3dbe7d-9085-4000-bcab-4513c8415b94" />
+
 
 ### Local Outlier Factor (LOF) and Reachability Distance
 
@@ -60,6 +70,9 @@ where:
 Reachability distance ensures a stable measure of neighborhood density by preventing very close points in sparse areas from artificially inflating density estimates.
 
 LOF’s focus on local relative density rather than global distance makes it effective for datasets with varying density regions and complex cluster structures.
+
+**LOF Evaluation:**
+<img width="619" height="525" alt="LOF_Eval" src="https://github.com/user-attachments/assets/b117ae07-226a-4f05-8f5b-d6552dd898a1" />
 
 ***
 
